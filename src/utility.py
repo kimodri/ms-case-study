@@ -1,9 +1,27 @@
 import pandas as pd
 import json, sys
 from sqlalchemy import text, inspect
-from log import logger
+import logging
+
+# Logging
+LOG_FILE = 'etl_process.log'
+LOG_FORMAT = '%(asctime)s - %(levelname)s - %(name)s - %(message)s'
+logging.basicConfig(
+    level=logging.INFO, 
+    format=LOG_FORMAT,
+    handlers=[
+        logging.FileHandler(LOG_FILE),     
+        logging.StreamHandler()           
+    ]
+)
+logger = logging.getLogger('ETL-main')
 
 def _convert(x):
+    """
+        A helper function that converts python literals to JSON strings. 
+        This also replaces empty JSON to NULL.
+    """
+
     if isinstance(x, (list, dict)):
         if len(x) == 0:  # empty list or dict
             return None
@@ -50,6 +68,17 @@ def transform(df, source_name, *fields):
     return df
 
 def check_duplicates (engine, source):
+    """
+        This checks if a table from the fetched JSON to be uploaded already exists
+        in the database.
+
+        Parameters:
+            engine: The sqlalchemy engine use to connect to the database.
+            source: The name of the file to be uploaded.
+
+        Returns:
+            None
+    """
     with engine.connect() as con:
         inspector = inspect(engine)
         table_names = inspector.get_table_names()
