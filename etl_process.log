@@ -1,0 +1,171 @@
+2025-10-30 17:13:43,889 - INFO - LOADING_DATA - Connecting to Azure Storage ...
+2025-10-30 17:13:43,967 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251027.json'
+Request method: 'GET'
+Request headers:
+    'x-ms-range': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'bbc45260-b570-11f0-83f6-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-10-30 17:13:45,186 - INFO - azure.core.pipeline.policies.http_logging_policy - Response status: 206
+Response headers:
+    'Content-Length': '14411966'
+    'Content-Type': 'application/octet-stream'
+    'Content-Range': 'REDACTED'
+    'Last-Modified': 'Thu, 30 Oct 2025 06:51:13 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DE1780B743BB73"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '2d5985ce-b01e-0009-427d-49ab41000000'
+    'x-ms-client-request-id': 'bbc45260-b570-11f0-83f6-cc47402fb3ed'
+    'x-ms-version': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-blob-content-md5': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'Date': 'Thu, 30 Oct 2025 09:13:45 GMT'
+2025-10-30 17:13:55,447 - INFO - LOADING_DATA - Data from Azure has been downloaded successfully...
+2025-10-30 17:13:55,448 - INFO - LOADING_DATA - Tables are being transformed ...
+2025-10-30 17:13:55,754 - INFO - LOADING_DATA - Tables have been transformed and now ready to be loaded ...
+2025-10-30 17:13:55,754 - INFO - LOADING_DATA - Connecting to the database ...
+2025-10-30 17:13:55,860 - INFO - LOADING_DATA - Connected to the database ...
+2025-10-30 17:13:55,861 - INFO - LOADING_DATA - Loading the tables ...
+2025-10-30 17:15:56,398 - INFO - ETL-main - Connecting to Azure Storage ...
+2025-10-30 17:15:56,448 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251027.json'
+Request method: 'GET'
+Request headers:
+    'x-ms-range': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '0abb9998-b571-11f0-855d-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-10-30 17:15:57,686 - INFO - azure.core.pipeline.policies.http_logging_policy - Response status: 206
+Response headers:
+    'Content-Length': '14411966'
+    'Content-Type': 'application/octet-stream'
+    'Content-Range': 'REDACTED'
+    'Last-Modified': 'Thu, 30 Oct 2025 06:51:13 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DE1780B743BB73"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '713f4cb6-e01e-0066-357d-49a1b2000000'
+    'x-ms-client-request-id': '0abb9998-b571-11f0-855d-cc47402fb3ed'
+    'x-ms-version': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-blob-content-md5': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'Date': 'Thu, 30 Oct 2025 09:15:57 GMT'
+2025-10-30 17:16:07,692 - INFO - ETL-main - Data from Azure has been downloaded successfully...
+2025-10-30 17:16:07,692 - INFO - ETL-main - Tables are being transformed ...
+2025-10-30 17:16:07,997 - INFO - ETL-main - Tables have been transformed and now ready to be loaded ...
+2025-10-30 17:16:07,998 - INFO - ETL-main - Connecting to the database ...
+2025-10-30 17:16:08,080 - INFO - ETL-main - Connected to the database ...
+2025-10-30 17:16:08,081 - INFO - ETL-main - Loading the tables ...
+2025-10-30 17:16:10,679 - WARNING - ETL-main - JSON file was already loaded. Please check the argument file. Skipping loading...
+2025-10-30 17:16:11,294 - WARNING - ETL-main - JSON file was already loaded. Please check the argument file. Skipping loading...
+2025-10-30 17:16:11,806 - WARNING - ETL-main - JSON file was already loaded. Please check the argument file. Skipping loading...
+2025-10-30 17:16:12,401 - WARNING - ETL-main - JSON file was already loaded. Please check the argument file. Skipping loading...
+2025-10-30 17:16:13,035 - WARNING - ETL-main - JSON file was already loaded. Please check the argument file. Skipping loading...
+2025-10-30 17:16:13,650 - WARNING - ETL-main - JSON file was already loaded. Please check the argument file. Skipping loading...
+2025-10-30 17:16:14,263 - WARNING - ETL-main - JSON file was already loaded. Please check the argument file. Skipping loading...
+2025-10-30 17:16:14,878 - WARNING - ETL-main - JSON file was already loaded. Please check the argument file. Skipping loading...
+2025-10-30 17:16:15,493 - WARNING - ETL-main - JSON file was already loaded. Please check the argument file. Skipping loading...
+2025-10-30 17:16:16,107 - WARNING - ETL-main - JSON file was already loaded. Please check the argument file. Skipping loading...
+2025-10-30 17:16:16,721 - WARNING - ETL-main - JSON file was already loaded. Please check the argument file. Skipping loading...
+2025-10-30 17:16:17,335 - WARNING - ETL-main - JSON file was already loaded. Please check the argument file. Skipping loading...
+2025-10-30 18:26:25,938 - INFO - ETL-main - Connecting to the database ...
+2025-10-30 18:26:26,057 - INFO - ETL-main - Connected to the database ...
+2025-10-30 18:26:58,889 - INFO - ETL-main - Connecting to the database ...
+2025-10-30 18:26:58,990 - INFO - ETL-main - Connected to the database ...
+2025-10-30 18:29:02,595 - INFO - ETL-main - Connecting to the database ...
+2025-10-30 18:29:02,666 - INFO - ETL-main - Connected to the database ...
+2025-10-30 18:29:02,666 - INFO - ETL-main - Checking if file already exists ...
+2025-10-30 18:29:49,998 - INFO - ETL-main - Connecting to the database ...
+2025-10-30 18:29:50,072 - INFO - ETL-main - Connected to the database ...
+2025-10-30 18:29:50,072 - INFO - ETL-main - Checking if file already exists ...
+2025-10-30 18:29:57,249 - ERROR - ETL-main - This file already exists in the database. Exiting ...
+2025-10-30 18:33:21,859 - INFO - ETL-main - Connecting to the database ...
+2025-10-30 18:33:21,974 - INFO - ETL-main - Connected to the database ...
+2025-10-30 18:33:21,974 - INFO - ETL-main - Checking if file already exists ...
+2025-10-30 18:33:28,506 - INFO - ETL-main - Connecting to Azure Storage ...
+2025-10-30 18:33:28,573 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251030.json'
+Request method: 'GET'
+Request headers:
+    'x-ms-range': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'df9d314e-b57b-11f0-b37f-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-10-30 18:33:29,664 - INFO - azure.core.pipeline.policies.http_logging_policy - Response status: 206
+Response headers:
+    'Content-Length': '19555680'
+    'Content-Type': 'application/octet-stream'
+    'Content-Range': 'REDACTED'
+    'Last-Modified': 'Thu, 30 Oct 2025 07:09:49 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DE178350F261E6"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'b21b0dd0-401e-0032-8088-49eee5000000'
+    'x-ms-client-request-id': 'df9d314e-b57b-11f0-b37f-cc47402fb3ed'
+    'x-ms-version': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-blob-content-md5': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'Date': 'Thu, 30 Oct 2025 10:33:29 GMT'
+2025-10-30 18:33:48,481 - INFO - ETL-main - Data from Azure has been downloaded successfully...
+2025-10-30 18:33:48,482 - INFO - ETL-main - Tables are being transformed ...
+2025-10-30 18:37:24,484 - INFO - ETL-main - Connecting to the database ...
+2025-10-30 18:37:24,560 - INFO - ETL-main - Connected to the database ...
+2025-10-30 18:37:24,560 - INFO - ETL-main - Checking if file already exists ...
+2025-10-30 18:37:31,918 - INFO - ETL-main - Connecting to Azure Storage ...
+2025-10-30 18:37:31,987 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251030.json'
+Request method: 'GET'
+Request headers:
+    'x-ms-range': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '70b382d5-b57c-11f0-8f59-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+No body was attached to the request
+2025-10-30 18:37:33,068 - INFO - azure.core.pipeline.policies.http_logging_policy - Response status: 206
+Response headers:
+    'Content-Length': '19555680'
+    'Content-Type': 'application/octet-stream'
+    'Content-Range': 'REDACTED'
+    'Last-Modified': 'Thu, 30 Oct 2025 07:09:49 GMT'
+    'Accept-Ranges': 'REDACTED'
+    'ETag': '"0x8DE178350F261E6"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '51045c3b-301e-0065-2889-4940d6000000'
+    'x-ms-client-request-id': '70b382d5-b57c-11f0-8f59-cc47402fb3ed'
+    'x-ms-version': 'REDACTED'
+    'x-ms-creation-time': 'REDACTED'
+    'x-ms-blob-content-md5': 'REDACTED'
+    'x-ms-lease-status': 'REDACTED'
+    'x-ms-lease-state': 'REDACTED'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-server-encrypted': 'REDACTED'
+    'Date': 'Thu, 30 Oct 2025 10:37:32 GMT'
+2025-10-30 18:37:49,061 - INFO - ETL-main - Data from Azure has been downloaded successfully...
+2025-10-30 18:37:49,062 - INFO - ETL-main - Tables are being transformed ...
+2025-10-30 18:37:49,408 - INFO - ETL-main - Tables have been transformed and now ready to be loaded ...
+2025-10-30 18:37:49,408 - INFO - ETL-main - Loading the tables ...

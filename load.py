@@ -1,10 +1,14 @@
-# use the blob
 import pandas as pd
-from sqlalchemy import create_engine, text
-from dotenv import load_dotenv
 import os, sys, json
+from log import logger
+from utility import transform, check_duplicates
+from dotenv import load_dotenv
+from sqlalchemy import create_engine
 from azure.storage.blob import BlobServiceClient
 from azure.core.exceptions import ResourceNotFoundError
+
+# Set timeout
+CONNECTION_TIMEOUT_SECONDS = 90
 
 # Get the file to load
 if len(sys.argv) < 2:
@@ -15,22 +19,38 @@ elif len(sys.argv) > 2:
 else:
     blob_name = sys.argv[1]
 
-# load the environment variable
+# load the environment variables
 load_dotenv()
 string_connection = os.getenv("DATABASE_URI")
 azure_blob_str_connection = os.getenv("AZURE_BLOB_CON")
 
-# Connect to blob
-blob_service_client = BlobServiceClient.from_connection_string(azure_blob_str_connection)
-container_name = "files"
-blob_client = blob_service_client.get_blob_client(container=container_name, blob=blob_name)
-source_name = blob_client.blob_name
-
-# Download the data
+# Connect to the database
 try:
+    logger.info("Connecting to the database ...")
+    conn_engine = create_engine(string_connection)
+    
+    logger.info("Connected to the database ...")
+except Exception as e: 
+    print(f"Cannot establish connection :(\nError: {e}")
+    sys.exit(1)
+
+# check for duplicates
+logger.info("Checking if file already exists ...")
+check_duplicates(conn_engine, blob_name)
+
+# Connect to blob and download the data
+try:
+    logger.info(f"Connecting to Azure Storage ...")
+    blob_service_client = BlobServiceClient.from_connection_string(
+        azure_blob_str_connection,
+        connection_timeout=CONNECTION_TIMEOUT_SECONDS
+    )
+    container_name = "files"
+    blob_client = blob_service_client.get_blob_client(container=container_name, blob=blob_name)
+    source_name = blob_client.blob_name
     downloaded_data = blob_client.download_blob().readall()
     data = json.loads(downloaded_data)
-    
+    logger.info(f"Data from Azure has been downloaded successfully...") 
 except ResourceNotFoundError:
     print("Blob does not exist.")
     sys.exit(1)
@@ -38,51 +58,6 @@ except Exception as e:
     print("Other error:", e)
     sys.exit(1)
 
-def _convert(x):
-    if isinstance(x, (list, dict)):
-        if len(x) == 0:  # empty list or dict
-            return None
-        return json.dumps(x)
-    if pd.isna(x):
-        return None
-    return x
-    
-def transform(df, *fields):
-    """
-        Transform DataFrame:
-        - Converts lists/dicts to JSON strings
-        - Keeps empty or null ones as None
-
-        Parameters:
-            df (pandas.DataFrame): The dataframe to transform.
-            fields: 
-
-        Returns:
-            a transformed dataframe.
-    """
-
-    # Check for the fields, return if no fields is needed
-    if (len(fields) < 1):
-        return 
-    
-    # Check the type of the arbitrary arguments
-    if not all(isinstance(field, str) for field in fields):
-        raise TypeError("All arguments following the dataframe must be strings.")
-
-    # Get the wanted fields
-    fields = [field for field in fields]
-
-    # Transform objects to JSON, handle empty ones as null
-    for col in df.columns:
-        df[col] = df[col].apply(_convert)
-    
-    # Add a source field from the most recent file
-    df["source_file"] = source_name
-    
-    # Subset the dataframe
-    df = df[fields]
-
-    return df
 
 def load(df, table_name, engine):
     """
@@ -95,32 +70,17 @@ def load(df, table_name, engine):
 
         Returns:
             None
-    """
-    # Check if the JSON file has already loaded
-    with engine.connect() as conn:
-
-        source_name = df['source_file'].iloc[0]
-
-        result = conn.execute(
-            text(f"SELECT COUNT(*) FROM {table_name} WHERE source_file = :src"), {"src": source_name}
-        )
-
-        # check the number of rows
-        count = result.scalar()
-
-    if count > 0:
-        print("JSON file was already loaded. Skipping loading...")
-        return 
-
+    """    
     df.to_sql(table_name, engine, if_exists="append", index=False)
     print(f"Successfully loaded: {table_name}")
 
 # create dataframes to process
+logger.info("Tables are being transformed ...")
 
 # module table
 df_modules = pd.DataFrame(data.get('modules'))
 df_modules = transform(
-    df_modules,
+    df_modules, source_name,
     'title', 'summary', 'locale', 'levels', 'roles',
     'products', 'subjects', 'url', 'last_modified', 'source_file', 
 )
@@ -128,7 +88,7 @@ df_modules = transform(
 # units table
 df_units = pd.DataFrame(data.get('units'))
 df_units = transform(
-    df_units,
+    df_units, source_name,
     'title', 'locale', 'duration_in_minutes',
     'last_modified', 'source_file', 
 )
@@ -136,7 +96,7 @@ df_units = transform(
 # learning paths
 df_learning_paths = pd.DataFrame(data.get('learningPaths'))
 df_learning_paths = transform(
-    df_learning_paths,
+    df_learning_paths, source_name,
     'title', 'summary', 'locale', 'levels',
     'products', 'subjects', 'source_file', 
 )
@@ -144,7 +104,7 @@ df_learning_paths = transform(
 # applied skills
 df_applied_skills = pd.DataFrame(data.get('appliedSkills'))
 df_applied_skills = transform(
-    df_applied_skills,
+    df_applied_skills, source_name,
     'title', 'summary', 'locale', 'levels', 'roles',
     'products', 'subjects', 'url', 'last_modified', 'source_file', 
 )
@@ -152,7 +112,7 @@ df_applied_skills = transform(
 # certifications
 df_certifications = pd.DataFrame(data.get('certifications'))
 df_certifications = transform(
-    df_certifications,
+    df_certifications, source_name,
     'title', 'subtitle', 'url', 'last_modified',
     'certification_type', 'exams', 'levels', 'roles', 'source_file', 
 )
@@ -160,7 +120,7 @@ df_certifications = transform(
 # mergedCertifications
 df_merged_certifications = pd.DataFrame(data.get('mergedCertifications'))
 df_merged_certifications = transform(
-    df_merged_certifications,
+    df_merged_certifications, source_name,
     'title', 'summary', 'url', 'last_modified',
     'certification_type', 'products', 'levels', 'roles', 'subjects',
     'prerequisites', 'skills', 'providers', 'career_paths', 'source_file', 
@@ -169,7 +129,7 @@ df_merged_certifications = transform(
 # exams
 df_exams = pd.DataFrame(data.get('exams'))
 df_exams = transform(
-    df_exams,
+    df_exams, source_name,
     'title', 'subtitle', 'url',
     'last_modified', 'levels', 'roles', 'products', 'providers', 'source_file', 
 )
@@ -177,27 +137,27 @@ df_exams = transform(
 # courses
 df_courses = pd.DataFrame(data.get('courses'))
 df_courses = transform(
-    df_courses,
+    df_courses, source_name,
     'title', 'summary', 'duration_in_hours',
     'url', 'last_modified', 'levels', 'roles', 'products', 'source_file', 
 )
 
 # levels
 df_levels = pd.DataFrame(data.get('levels'))
-df_levels = transform(df_levels, 'name', 'source_file')
+df_levels = transform(df_levels, source_name, 'name', 'source_file')
 
 # products
 df_products = pd.DataFrame(data.get('products'))
-df_products = transform(df_products, 'name', 'children', 'source_file')
+df_products = transform(df_products, source_name, 'name', 'children', 'source_file')
 
 # roles
 df_roles = pd.DataFrame(data.get('roles'))
-df_roles = transform(df_roles, 'name', 'source_file')
+df_roles = transform(df_roles, source_name, 'name', 'source_file')
 
 # subjects
 df_subjects = pd.DataFrame(data.get('subjects'))
-df_subjects = transform(df_subjects, 'name', 'children', 'source_file')
-
+df_subjects = transform(df_subjects, source_name, 'name', 'children', 'source_file')
+logger.info("Tables have been transformed and now ready to be loaded ...")
 
 tables_dict = {
     "modules": df_modules,
@@ -214,14 +174,7 @@ tables_dict = {
     "subjects": df_subjects
 }
 
-# connect to the database
-try:
-    conn_engine = create_engine(string_connection)
-    print("connected to database")
+logger.info("Loading the tables ...")
+for key, value in tables_dict.items():
+    load(value, key, conn_engine)
 
-    # load to the database
-    for key, value in tables_dict.items():
-        load(value, key, conn_engine)
-
-except Exception as e: 
-    print(f"Cannot establish connection :(\nError: {e}")
