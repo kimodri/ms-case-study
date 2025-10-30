@@ -4,9 +4,10 @@ from sqlalchemy import create_engine, text
 from dotenv import load_dotenv
 import os, sys, json
 from azure.storage.blob import BlobServiceClient
+from azure.core.exceptions import ResourceNotFoundError
 
 # Get the file to load
-if len(sys.argv) < 1:
+if len(sys.argv) < 2:
     print("load.py requires the JSON file to load as an argument")
     sys.exit(1)
 elif len(sys.argv) > 2:
@@ -22,17 +23,20 @@ azure_blob_str_connection = os.getenv("AZURE_BLOB_CON")
 # Connect to blob
 blob_service_client = BlobServiceClient.from_connection_string(azure_blob_str_connection)
 container_name = "files"
-blob_client = blob_service_client.get_blob(container=container_name, blob=blob_name)
+blob_client = blob_service_client.get_blob_client(container=container_name, blob=blob_name)
+source_name = blob_client.blob_name
 
 # Download the data
-downloaded_data = blob_client.download_blob().readall()
-data = json.loads(downloaded_data)
-
-
-# Get the json file with sys and blob storage
-files = os.listdir('./files')
-with open(f"files/{files[-1]}", 'r', encoding="utf-8") as f:
-    data = json.load(f)
+try:
+    downloaded_data = blob_client.download_blob().readall()
+    data = json.loads(downloaded_data)
+    
+except ResourceNotFoundError:
+    print("Blob does not exist.")
+    sys.exit(1)
+except Exception as e:
+    print("Other error:", e)
+    sys.exit(1)
 
 def _convert(x):
     if isinstance(x, (list, dict)):
@@ -73,7 +77,7 @@ def transform(df, *fields):
         df[col] = df[col].apply(_convert)
     
     # Add a source field from the most recent file
-    df["source_file"] = files[-1]
+    df["source_file"] = source_name
     
     # Subset the dataframe
     df = df[fields]
