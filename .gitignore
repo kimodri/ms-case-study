@@ -3,3 +3,5 @@
 .ipynb_checkpoints/
 files/
 __pycache__/
+checks/
+local.settings.json
