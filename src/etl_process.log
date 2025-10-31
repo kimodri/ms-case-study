@@ -302,3 +302,451 @@ Request headers:
     'x-ms-client-request-id': '91a60693-b5bd-11f0-ae5f-cc47402fb3ed'
     'Authorization': 'REDACTED'
 A body is sent with the request
+2025-10-31 02:45:52,910 - INFO - ETL-main - Connecting to Azure storage ...
+2025-10-31 02:45:53,023 - INFO - ETL-main - Fetching data from MS Learn API ...
+2025-10-31 02:45:55,361 - INFO - ETL-main - Uploading to Azure Blob Storage: files/microsoft_learn_catalog_20251031.json...
+2025-10-31 02:45:55,370 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'aae0d04a-b5c0-11f0-8f5b-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 02:46:37,348 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'c3e628e8-b5c0-11f0-a2f2-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 02:47:20,769 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'ddc7bc0e-b5c0-11f0-9166-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 02:48:23,087 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '02ecc153-b5c1-11f0-8f59-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 03:00:05,967 - INFO - ETL-main - Connecting to Azure storage ...
+2025-10-31 03:00:06,025 - INFO - ETL-main - Fetching data from MS Learn API ...
+2025-10-31 03:00:08,852 - INFO - ETL-main - Uploading to Azure Blob Storage: files/microsoft_learn_catalog_20251031.json...
+2025-10-31 03:00:08,861 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'a798378a-b5c2-11f0-962c-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 03:00:49,722 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'bff40f4d-b5c2-11f0-8e97-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 03:01:34,927 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'dae5f112-b5c2-11f0-91be-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 03:02:37,463 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '002c2cc3-b5c3-11f0-9f33-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 03:30:56,889 - INFO - ETL-main - Connecting to Azure storage ...
+2025-10-31 03:30:56,976 - INFO - ETL-main - Fetching data from MS Learn API ...
+2025-10-31 03:30:59,605 - INFO - ETL-main - Uploading to Azure Blob Storage: files/microsoft_learn_catalog_20251031.json...
+2025-10-31 03:30:59,615 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'f6bbd96b-b5c6-11f0-8adf-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 03:31:40,034 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '0ed362a9-b5c7-11f0-950f-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 03:32:27,220 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '2af36fd1-b5c7-11f0-92db-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 03:33:30,496 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '50aa7f94-b5c7-11f0-af7b-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 08:38:22,605 - INFO - ETL-main - Connecting to Azure storage ...
+2025-10-31 08:38:22,682 - INFO - ETL-main - Fetching data from MS Learn API ...
+2025-10-31 08:38:31,098 - INFO - ETL-main - Uploading to Azure Blob Storage: files/microsoft_learn_catalog_20251031.json...
+2025-10-31 08:38:31,108 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'ecae46fb-b5f1-11f0-863e-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 08:39:10,522 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '042c732c-b5f2-11f0-a5c3-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 08:39:54,432 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '1e589224-b5f2-11f0-82c1-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 08:40:57,406 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '43e1a0b2-b5f2-11f0-97f2-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 08:42:53,416 - INFO - ETL-main - Connecting to Azure storage ...
+2025-10-31 08:42:53,484 - INFO - ETL-main - Fetching data from MS Learn API ...
+2025-10-31 08:42:55,345 - INFO - ETL-main - Uploading to Azure Blob Storage: files/microsoft_learn_catalog_20251031.json...
+2025-10-31 08:42:55,347 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '6883'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '8a2e0c53-b5f2-11f0-950a-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 08:42:56,689 - INFO - azure.core.pipeline.policies.http_logging_policy - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Fri, 31 Oct 2025 00:42:59 GMT'
+    'ETag': '"0x8DE1816711E1D33"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'cc42bc3a-401e-001d-5bff-49e32e000000'
+    'x-ms-client-request-id': '8a2e0c53-b5f2-11f0-950a-cc47402fb3ed'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Fri, 31 Oct 2025 00:42:59 GMT'
+2025-10-31 09:02:57,675 - INFO - ETL-main - Connecting to the database ...
+2025-10-31 09:02:58,361 - INFO - ETL-main - Connected to the database ...
+2025-10-31 09:02:58,361 - ERROR - ETL-main - File does not exist ...
+2025-10-31 09:03:54,711 - INFO - ETL-main - Connecting to the database ...
+2025-10-31 09:03:54,818 - INFO - ETL-main - Connected to the database ...
+2025-10-31 09:03:54,819 - ERROR - ETL-main - File does not exist ...
+2025-10-31 09:04:39,086 - INFO - ETL-main - Connecting to the database ...
+2025-10-31 09:04:39,199 - INFO - ETL-main - Connected to the database ...
+2025-10-31 09:04:39,201 - ERROR - ETL-main - [Errno 2] No such file or directory: 'files/microsoft_learn_catalog_20251031.json': File does not exist ...
+2025-10-31 09:05:11,981 - INFO - ETL-main - Connecting to the database ...
+2025-10-31 09:05:12,110 - INFO - ETL-main - Connected to the database ...
+2025-10-31 09:05:12,321 - INFO - ETL-main - Checking if file already exists ...
+2025-10-31 09:05:23,123 - INFO - ETL-main - Tables are being transformed ...
+2025-10-31 09:05:23,761 - INFO - ETL-main - Tables have been transformed and now ready to be loaded ...
+2025-10-31 09:05:23,762 - INFO - ETL-main - Loading tables into the database ...
+2025-10-31 09:05:30,915 - INFO - ETL-main - Successfully loaded: modules
+2025-10-31 09:05:49,041 - INFO - ETL-main - Successfully loaded: units
+2025-10-31 09:05:50,673 - INFO - ETL-main - Successfully loaded: learning_paths
+2025-10-31 09:05:52,004 - INFO - ETL-main - Successfully loaded: df_applied_skills
+2025-10-31 09:05:53,385 - INFO - ETL-main - Successfully loaded: certifications
+2025-10-31 09:05:54,658 - INFO - ETL-main - Successfully loaded: merged_certifications
+2025-10-31 09:05:55,699 - INFO - ETL-main - Successfully loaded: exams
+2025-10-31 09:05:56,910 - INFO - ETL-main - Successfully loaded: courses
+2025-10-31 09:05:57,985 - INFO - ETL-main - Successfully loaded: levels
+2025-10-31 09:05:58,964 - INFO - ETL-main - Successfully loaded: products
+2025-10-31 09:06:00,094 - INFO - ETL-main - Successfully loaded: roles
+2025-10-31 09:06:00,997 - INFO - ETL-main - Successfully loaded: subjects
+2025-10-31 09:06:00,998 - INFO - ETL-main - Load process complete!
+2025-10-31 09:26:18,632 - INFO - ETL-main - Connecting to Azure storage ...
+2025-10-31 09:26:18,716 - INFO - ETL-main - Fetching data from MS Learn API ...
+2025-10-31 09:26:20,626 - INFO - ETL-main - Uploading to Azure Blob Storage: files/microsoft_learn_catalog_20251031_092618.json...
+2025-10-31 09:26:20,630 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031_092618.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '6883'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '9b0c8cc8-b5f8-11f0-bf42-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 09:26:22,268 - INFO - azure.core.pipeline.policies.http_logging_policy - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Fri, 31 Oct 2025 01:26:25 GMT'
+    'ETag': '"0x8DE181C822E35BD"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f23e176c-301e-004a-4c05-4a4d1d000000'
+    'x-ms-client-request-id': '9b0c8cc8-b5f8-11f0-bf42-cc47402fb3ed'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Fri, 31 Oct 2025 01:26:24 GMT'
+2025-10-31 09:26:58,397 - INFO - ETL-main - Connecting to Azure storage ...
+2025-10-31 09:26:58,463 - INFO - ETL-main - Fetching data from MS Learn API ...
+2025-10-31 09:27:01,054 - INFO - ETL-main - Uploading to Azure Blob Storage: files/microsoft_learn_catalog_20251031_092658.json...
+2025-10-31 09:27:01,056 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031_092658.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19573384'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'b3252dd3-b5f8-11f0-b6ca-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 09:27:40,867 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031_092658.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19573384'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'cadfe168-b5f8-11f0-9913-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 09:28:26,038 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031_092658.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19573384'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': 'e5cc2d8c-b5f8-11f0-b976-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 09:29:29,359 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031_092658.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19573384'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '0b8a5248-b5f9-11f0-a992-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 09:39:30,833 - INFO - ETL-main - Connecting to Azure storage ...
+2025-10-31 09:39:30,944 - INFO - ETL-main - Fetching data from MS Learn API ...
+2025-10-31 09:39:33,934 - INFO - ETL-main - Uploading 18.67 MB to Azure Blob Storage: files/microsoft_learn_catalog_20251031_093930.json...
+2025-10-31 09:39:33,938 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031_093930.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19573384'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '73e5aa9b-b5fa-11f0-83e8-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 09:40:57,543 - INFO - azure.core.pipeline.policies.http_logging_policy - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Fri, 31 Oct 2025 01:41:00 GMT'
+    'ETag': '"0x8DE181E8BE3B7B7"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '848227f0-201e-001b-0e07-4ad091000000'
+    'x-ms-client-request-id': '73e5aa9b-b5fa-11f0-83e8-cc47402fb3ed'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Fri, 31 Oct 2025 01:41:00 GMT'
+2025-10-31 09:53:36,441 - INFO - ETL-main - Connecting to Azure storage ...
+2025-10-31 09:53:36,532 - INFO - ETL-main - Fetching data from MS Learn API ...
+2025-10-31 09:53:39,071 - INFO - ETL-main - Uploading 18.65 MB to Azure Blob Storage: files/microsoft_learn_catalog_20251031_095336.json...
+2025-10-31 09:53:39,075 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031_095336.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19555680'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '6ba36149-b5fc-11f0-bc46-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 09:54:40,855 - INFO - azure.core.pipeline.policies.http_logging_policy - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Fri, 31 Oct 2025 01:54:44 GMT'
+    'ETag': '"0x8DE1820769D59F5"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': 'f3853d55-d01e-001f-3009-4a5d96000000'
+    'x-ms-client-request-id': '6ba36149-b5fc-11f0-bc46-cc47402fb3ed'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Fri, 31 Oct 2025 01:54:43 GMT'
+2025-10-31 10:06:15,928 - INFO - ETL-main - Connecting to Azure storage ...
+2025-10-31 10:06:16,006 - INFO - ETL-main - Fetching data from MS Learn API ...
+2025-10-31 10:06:18,788 - INFO - ETL-main - Uploading 18.67 MB to Azure Blob Storage: files/microsoft_learn_catalog_20251031.json...
+2025-10-31 10:06:18,797 - INFO - azure.core.pipeline.policies.http_logging_policy - Request URL: 'https://mslearnjsonstorage.blob.core.windows.net/files/microsoft_learn_catalog_20251031.json'
+Request method: 'PUT'
+Request headers:
+    'Content-Length': '19573384'
+    'x-ms-blob-type': 'REDACTED'
+    'x-ms-version': 'REDACTED'
+    'Content-Type': 'application/octet-stream'
+    'Accept': 'application/xml'
+    'User-Agent': 'azsdk-python-storage-blob/12.27.1 Python/3.13.7 (Windows-11-10.0.26100-SP0)'
+    'x-ms-date': 'REDACTED'
+    'x-ms-client-request-id': '3077b920-b5fe-11f0-9466-cc47402fb3ed'
+    'Authorization': 'REDACTED'
+A body is sent with the request
+2025-10-31 10:08:19,536 - INFO - azure.core.pipeline.policies.http_logging_policy - Response status: 201
+Response headers:
+    'Content-Length': '0'
+    'Content-MD5': 'REDACTED'
+    'Last-Modified': 'Fri, 31 Oct 2025 02:08:22 GMT'
+    'ETag': '"0x8DE18225E881D74"'
+    'Server': 'Windows-Azure-Blob/1.0 Microsoft-HTTPAPI/2.0'
+    'x-ms-request-id': '95856dde-401e-0022-5d0a-4a2b8d000000'
+    'x-ms-client-request-id': '3077b920-b5fe-11f0-9466-cc47402fb3ed'
+    'x-ms-version': 'REDACTED'
+    'x-ms-content-crc64': 'REDACTED'
+    'x-ms-request-server-encrypted': 'REDACTED'
+    'Date': 'Fri, 31 Oct 2025 02:08:22 GMT'
