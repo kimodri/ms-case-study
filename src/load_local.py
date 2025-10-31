@@ -9,7 +9,7 @@ CONNECTION_TIMEOUT_SECONDS = 90
 
 # load the environment variables
 load_dotenv()
-string_connection = os.getenv("DATABASE_URI")
+string_connection = os.getenv("DATABASE_URI_LCOAL_VER")
 
 # Get the file to load
 if len(sys.argv) < 2:
@@ -78,7 +78,7 @@ tables_dict['learning_paths'] = transform(
 
 # applied skills
 df_applied_skills = pd.DataFrame(data.get('appliedSkills'))
-tables_dict['df_applied_skills'] = transform(
+tables_dict['applied_skills'] = transform(
     df_applied_skills, source_name,
     'title', 'summary', 'locale', 'levels', 'roles',
     'products', 'subjects', 'url', 'last_modified', 'source_file', 
